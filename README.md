@@ -12,6 +12,15 @@ This project is a music recommendation system built using a Spotify dataset. It 
 - **Elbow Method:** Determines the optimal number of clusters for the K-Means algorithm.
 - **Interactive Web App:** A Streamlit application that allows users to get song recommendations based on their choice of genre, playlist, and subgenre.
 
+## Screenshots
+
+**Main Interface:**
+![Main Interface](screenshots/main.png)
+
+**Recommendations:**
+![Recommendations](screenshots/output.png)
+![Recommendations](screenshots/output1.png)
+
 ## Project Steps
 
 1.  **Data Loading and Cleaning:**
