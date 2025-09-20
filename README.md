@@ -12,16 +12,36 @@ This project is a music recommendation system built using a Spotify dataset. It 
 - **Elbow Method:** Determines the optimal number of clusters for the K-Means algorithm.
 - **Interactive Web App:** A Streamlit application that allows users to get song recommendations based on their choice of genre, playlist, and subgenre.
 
-## Dataset
+## Project Steps
 
-The project uses the `spotify_dataset.csv` file, which contains information about various songs, including their audio features, genre, and playlist information.
+1.  **Data Loading and Cleaning:**
+    *   Load the `spotify_dataset.csv` into a pandas DataFrame.
+    *   Handle missing values by dropping rows with `dropna()`.
+    *   Remove duplicate entries using `drop_duplicates()`.
 
-## Methodology
+2.  **Exploratory Data Analysis (EDA):**
+    *   Select numerical features from the dataset.
+    *   Calculate the correlation matrix of these features.
+    *   Visualize the correlation matrix using a heatmap with `seaborn` and `matplotlib`.
 
-1.  **Data Pre-processing:** The dataset is loaded and cleaned to remove any missing or duplicate entries.
-2.  **Feature Scaling:** The numerical audio features are scaled using `StandardScaler` to prepare them for the clustering algorithm.
-3.  **Clustering:** The K-Means clustering algorithm is applied to the scaled features to group the songs into 4 distinct clusters. The optimal number of clusters was determined using the elbow method.
-4.  **Recommendation Logic:** The recommendation system is based on the generated clusters. When a user requests a recommendation, a song is selected from their specified genre/playlist/subgenre, and other songs from the same cluster are recommended.
+3.  **Clustering Model:**
+    *   Scale the numerical features using `StandardScaler`.
+    *   Use the Elbow Method to find the optimal number of clusters (k). This involves iterating through a range of k values and plotting the inertia.
+    *   Apply the K-Means algorithm with the optimal k (k=4) to cluster the songs.
+    *   Add the cluster labels back to the main DataFrame.
+
+4.  **Visualization of Clusters:**
+    *   Use Principal Component Analysis (PCA) to reduce the dimensionality of the features to 2 components for visualization.
+    *   Create a scatter plot to visualize the song clusters.
+
+5.  **Building the Recommendation System:**
+    *   Develop a function that takes a song as input and finds its cluster.
+    *   The function then returns a random sample of other songs from the same cluster.
+
+6.  **Creating the Web Application:**
+    *   Build an interactive web application using Streamlit.
+    *   Create dropdowns for users to select genre, playlist, and subgenre.
+    *   Implement a "Recommend" button that triggers the recommendation logic based on the user's selection and displays the recommended songs.
 
 ## Files in the Project
 
