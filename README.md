@@ -14,12 +14,17 @@ This project is a music recommendation system built using a Spotify dataset. It 
 
 ## Screenshots
 
-**Main Interface:**
-<img src="screenshots/main.png" width="600">
+<div style="text-align: center;">
+  **Main Interface:**
+  <img src="screenshots/main.png" width="600">
+</div>
 
-**Recommendations:**
-<img src="screenshots/output.png" width="600">
-<img src="screenshots/output1.png" width="600">
+<div style="text-align: center;">
+  **Recommendations:**
+  <img src="screenshots/output.png" width="600">
+  <br>
+  <img src="screenshots/output1.png" width="600">
+</div>
 
 ## Project Steps
 
